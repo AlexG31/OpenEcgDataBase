@@ -17,8 +17,10 @@ class Ecg extends CI_Controller {
             $this->load->view('ecg/main_footer', $data);
 
         }
-        public function view($page = 'index')
+        public function detail($recID = 'rec0')
         {
+            $data['recID'] = $recID;
+            $this->load->view('ecg/detail_page', $data);
         }
 }
 ?>
