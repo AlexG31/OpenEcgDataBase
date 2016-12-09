@@ -52,12 +52,6 @@
       ?>
   </div>
 
-  <div class= "container">
-      <?php
-      printf('<img src="/data/%s_2.jpg" alt=" " /> ', $recID);
-      ?>
-  </div>
-
 
   <div class="container">
     <!--<pre class="code-example">-->

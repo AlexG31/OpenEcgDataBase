@@ -21,22 +21,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
 
-    <style>
-
-    .line-separator{
-
-    height:1px;
-
-    background:#717171;
-
-    border-bottom:1px solid #313030;
-
-    }
-
-
-
-    </style>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -46,14 +32,14 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="twelve columns" style="background-image:url('/img/header.png')">
+<div class="section values">
   <div class="container">
-      <div class="eight column " style="margin-top: 12%; ">
-        <h1 class="u-pull-right">欣和怡点ECG数据库</h1>
+      <div class="u-pull-right" style="margin-top: 0%;">
+        <h2 class="" style="color:black">欣和怡点ECG数据库</h2>
       </div>
   </div>
-  <div class = "twelve colomns" style="height:6px; position:relative; margin-top:60%; background-color:#ebeff0">
-  </div>
+  <!--<div class = "" style=" height:6px; position:relative; margin-top:20%; background-color:#ebeff0">
+  </div>-->
   </div>
 
 <!--Search Region 
@@ -69,24 +55,11 @@
       <input type="submit" value="Search" name="search submit" class="button-primary u-pull-right" style="width:35%;margin-top:10%">
 
   </form>
-  </div>
 
-
-  <!--<div class= "row">-->
-  <!--<div class = "twelve colomns" style="height:4px; background-color:#ebeff0">-->
-  <!--</div>-->
-  <!--</div>-->
-
-
-<!--ECG Data Table 
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-<!--<pre class="code-example">-->
-  <!--<code class="code-example-body prettyprint">-->
-  <table class="u-full-width">
+  <div class ="one-third column">
+  <table class="" style="table-layout:fixed; word-wrap:break-word; overflow:hidden;overflow-x: scroll;width:50em; max-width:100%; ">
   <thead>
     <tr>
-      <th>Choose</th>
       <th>RecordID</th>
       <th>Age</th>
       <th>Sex</th>
@@ -98,15 +71,15 @@
 
  <?php
     foreach($file_arr as $value) {
-        echo '<tr>';
-        echo '<td><input type="checkbox"></td>';
-        echo "<td>$value</td>";
-        echo "<td>42</td>";
-        echo "<td>Male</td>";
-        echo "<td>42</td>";
-
         $len = strlen($value);
         $recID = substr($value, 0, $len - 11);
+        echo '<tr>';
+        //echo '<td><input type="checkbox"></td>';
+        echo "<td>$recID</td>";
+        echo "<td>".rand(30,60)."</td>";
+        echo "<td>".array("Male", "Female")[rand(0,1)]."</td>";
+        echo "<td>暂无</td>";
+
         printf('<td>
             <a href="/index.php/ecg/detail/%s">
             <input type="submit" value = "detail" >
@@ -119,8 +92,25 @@
 ?>
   </tbody>
 </table>
+</div>
+  </div>
+
+
+  <!--<div class= "row">-->
+  <!--<div class = "twelve colomns" style="height:4px; background-color:#ebeff0">-->
+  <!--</div>-->
+  <!--</div>-->
+
+
+<!--ECG Data Table 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+  <div class="eight columns">
+<!--<pre class="code-example">-->
+  <!--<code class="code-example-body prettyprint">-->
   <!--</code>-->
   <!--</pre>-->
+  </div>
   </div>
 
 <!--Nav button
@@ -135,7 +125,7 @@
             if ($is_center == False) {
                 $button_class = "";
             }
-            $str = sprintf('<a href="/index.php/ecg/index/%d"> <input type="submit" %s value="%d" ></a>', $index, $button_class, $index+1);
+            $str = sprintf('<a href="/index.php/ecg/database/%d"> <input type="submit" %s value="%d" ></a>', $index, $button_class, $index+1);
             return $str;
         }
 
@@ -165,6 +155,12 @@
   </div>
   </div>
 
+<div class="section values">
+        <div class="two-third column value">
+          <h2 class="value-heading">Purchase Increase</h2>
+          <p class="value-description">Percentage of users more likely to purchase on mobile friendly site.</p>
+        </div>
+  </div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

@@ -79,6 +79,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </a>
 
     </div>
+    <div class = "container">
+    <li>
+    <a href = "http://www.w3schools.com/w3css/tryw3css_templates_band.htm">template</a>
+    </li>
+<li>
+    <a href="http://www.w3schools.com/w3css/tryw3css_templates_startup.htm">next</a>
+</li>
+<li>
+<a href = "http://45.76.193.222/index.php/ecg/welcome#contact">welcome</a>
+</li>
+    </div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
