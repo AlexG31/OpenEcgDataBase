@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class = "container">
 
     <a href = "/index.php/ecg">
-    <input type="button" class = "button-primary u-full-width" value="Goto ECG Database">
+    <input type="button" class = "button-primary" value="Goto ECG Database">
     </a>
 
     </div>

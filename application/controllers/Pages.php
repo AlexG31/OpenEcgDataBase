@@ -11,6 +11,8 @@ class Pages extends CI_Controller {
 
             $data['title'] = ucfirst($page); // Capitalize the first letter
 
+            echo 'Post:';
+            echo $_POST['search_text'];
             echo '<h1> Dir:</h1>';
             $file_arr = glob('application/views/pages/*.php');
             echo 'size=';
