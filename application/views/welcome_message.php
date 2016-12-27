@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/w3.css">
 	<style type="text/css">
 
 	::selection { background-color: #E13300; color: white; }
@@ -65,6 +66,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+
+    h3{
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      letter-spacing: 1px;
+    }
+
 	</style>
 </head>
 <body>
@@ -77,8 +84,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <a href = "/index.php/ecg">
     <input type="button" class = "button-primary u-full-width" value="Goto ECG Database">
     </a>
-
     </div>
+
+
+
+    <div class = "container">
+    <div class = "w3-container w3-center" style="margin-top:24px;margin-bottom:24px">
+    <div class = "w3-container w3-grey w3-leftbar w3-border-green" style="border-bottom-style:dotted;border-top-style:dotted;width:100%;height:100%">
+    <h3>Download Demo Files</h3>
+    <a href = "/uploads" style="margin-bottom:20px">
+    <input type="button" class = "w3-btn w3-white w3-border w3-border-blue" value="Download" style="margin-bottom:20px">
+    </a>
+    </div>
+    </div>
+    </div>
+
+    <div class = "container">
+    <div class = "w3-container w3-center" style="margin-top:24px;margin-bottom:24px">
+    <div class = "w3-container w3-grey w3-leftbar w3-border-red" style="border-bottom-style:dotted;border-top-style:dotted;width:100%;height:100%">
+    <h3>Upload File</h3>
+    <a href = "/index.php/lab_upload_file" style="margin-bottom:20px">
+    <input type="button" class = "button button1" value="Upload" style="margin-bottom:20px">
+    </a>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
     <div class = "container">
     <li>
     <a href = "http://www.w3schools.com/w3css/tryw3css_templates_band.htm">template</a>

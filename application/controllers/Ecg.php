@@ -27,10 +27,29 @@ class Ecg extends CI_Controller {
 
         public function detail($recID = 'rec0')
         {
+            echo 'Detail';
+            return;
             $data['recID'] = $recID;
             $this->load->view('ecg/detail_page', $data);
         }
 
+        public function download() {
+            // Download $file_name
+            //$file_name="/img/ecg/test.png";
+            if (file_exists($file_name)) {
+                    header('Content-Description: File Transfer');
+                        header('Content-Type: application/octet-stream');
+                        header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
+                        header('Expires: 0');
+                        header('Cache-Control: must-revalidate');
+                        header('Pragma: public');
+                        header('Content-Length: ' . filesize($file_name));
+                        readfile($file_name);
+                        exit;
+            } else {
+                echo 'No Such File!';
+            }
+        }
         public function welcome() {
             $this->load->view('ecg/welcome');
         }
